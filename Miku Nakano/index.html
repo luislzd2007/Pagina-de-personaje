@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Miku Nakano</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #e8edf4;
+            color: #202d3f;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+        }
+
+        .hero-miku {
+            background: linear-gradient(
+                135deg,
+                #101a2c,
+                #263e5c,
+                #547da5
+            );
+            min-height: 500px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            color: #dce7f2;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            max-width: 650px;
+            font-weight: 400;
+        }
+
+        .miku-info {
+            color: #bcd0e3;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 650px;
+            margin-top: 15px;
+        }
+
+        .miku-image {
+            width: 360px;
+            max-height: 450px;
+            object-fit: contain;
+            border-radius: 20px;
+            filter: drop-shadow(
+                0 15px 20px rgba(0, 0, 0, 0.45)
+            );
+            transition: transform 0.3s ease;
+        }
+
+        .miku-image:hover {
+            transform: scale(1.03);
+        }
+
+        .section-title {
+            color: #294d70;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+        }
+
+        .lore-box {
+            background-color: #ffffff;
+            border-left: 5px solid #5d91bd;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(20, 35, 55, 0.12);
+        }
+
+        .lore-box p {
+            color: #29384b;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        .lore-box strong {
+            color: #315f88;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background-color: #d9e6f2;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(20, 35, 55, 0.10);
+        }
+
+        .info-box .dato {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 0;
+            border-bottom: 1px solid #b9ccde;
+            font-size: 1.1rem;
+        }
+
+        .info-box .dato:last-child {
+            border-bottom: none;
+        }
+
+        .info-box strong {
+            color: #294d70 !important;
+            min-width: 110px;
+            font-weight: 600;
+        }
+
+        .info-box span {
+            color: #26384c;
+        }
+
+        .release-box {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(20, 35, 55, 0.12);
+            border-top: 4px solid #5d91bd;
+        }
+
+        .release-box p {
+            color: #29384b;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .release-box strong {
+            color: #315f88;
+        }
+
+        .stat-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(20, 35, 55, 0.12);
+            transition: transform 0.2s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-title {
+            color: #294d70;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .stat-box p:last-child {
+            color: #526274;
+            line-height: 1.5;
+        }
+
+        .progress {
+            height: 12px;
+            border-radius: 10px;
+        }
+
+        .footer-miku {
+            background-color: #101a2c;
+            color: #dce7f2;
+            padding: 30px;
+        }
+
+        .footer-miku strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .miku-image {
+                width: 280px;
+                margin-top: 30px;
+            }
+
+            .info-box .dato {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 3px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="hero hero-miku" id="inicio">
+
+        <div class="hero-body">
+
+            <div class="container">
+
+                <div class="columns is-vcentered">
+
+                    <div class="column is-5 has-text-centered">
+
+                        <img
+                            src="mikugod1.jpg"
+                            alt="Miku Nakano"
+                            class="miku-image">
+
+                    </div>
+
+                    <div class="column is-7">
+
+                        <h1 class="title hero-title has-text-white">
+                            Miku Nakano
+                        </h1>
+
+                        <p class="hero-text">
+                            Una de las cinco hermanas Nakano,
+                            conocida por su personalidad tranquila,
+                            su pasión por la historia y su desarrollo
+                            personal.
+                        </p>
+
+                        <p class="miku-info">
+                            <strong>Dato interesante:</strong>
+                            Miku es la tercera de las quintillizas y
+                            es especialmente conocida por su afición
+                            a la historia japonesa. También destaca
+                            por sus audífonos, que forman parte de su
+                            apariencia característica.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section id="historia" class="section">
+
+            <div class="container">
+
+                <div class="columns">
+
+                    <div class="column is-8">
+
+                        <h2 class="title is-3 section-title">
+                            Historia
+                        </h2>
+
+                        <div class="lore-box">
+
+                            <p>
+                                Miku Nakano es una de las cinco hermanas
+                                protagonistas de
+                                <strong>Las Quintillizas</strong>.
+                                Es la tercera hermana y se caracteriza
+                                por ser tranquila, reservada y algo tímida.
+                                Desde pequeña ha tenido un gran interés
+                                por la historia, especialmente por
+                                personajes históricos japoneses.
+                            </p>
+
+                            <br>
+
+                            <p>
+                                Al comienzo de la historia, Miku tiene
+                                dificultades para expresar sus sentimientos
+                                y relacionarse con los demás. También tiene
+                                problemas académicos, por lo que necesita
+                                esforzarse para mejorar sus calificaciones.
+                            </p>
+
+                            <br>
+
+                            <p>
+                                Con el paso del tiempo, comienza a estudiar
+                                con mayor dedicación y a trabajar en su
+                                confianza. Gracias a las experiencias que
+                                vive junto a sus hermanas y a Fuutarou,
+                                Miku logra superar poco a poco su timidez
+                                y expresar mejor lo que piensa y siente.
+                            </p>
+
+                            <br>
+
+                            <p>
+                                Su desarrollo a lo largo de la historia
+                                muestra cómo una persona reservada puede
+                                ganar confianza y luchar por aquello que
+                                realmente le importa.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="column is-4">
+
+                        <h2 class="title is-3 section-title">
+                            Datos
+                        </h2>
+
+                        <div class="info-box">
+
+                            <p class="dato">
+                                <strong>Nombre:</strong>
+                                <span>Miku Nakano</span>
+                            </p>
+
+                            <p class="dato">
+                                <strong>Rol:</strong>
+                                <span>Estudiante</span>
+                            </p>
+
+                            <p class="dato">
+                                <strong>Hermanas:</strong>
+                                <span>Cuatro</span>
+                            </p>
+
+                            <p class="dato">
+                                <strong>Interés:</strong>
+                                <span>Historia</span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="quintillizas" class="section has-background-light">
+
+            <div class="container">
+
+                <h2 class="title is-3 section-title">
+                    Sobre Las Quintillizas
+                </h2>
+
+                <div class="release-box">
+
+                    <p>
+                        <strong>Las Quintillizas</strong>, también conocida
+                        como <em>The Quintessential Quintuplets</em>, es un
+                        manga escrito e ilustrado por Negi Haruba. Su
+                        serialización comenzó en <strong>agosto de 2017</strong>
+                        en la revista Weekly Shōnen Magazine.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        La adaptación al anime se estrenó en
+                        <strong>enero de 2019</strong> y llevó la historia
+                        de las cinco hermanas a la televisión. La serie
+                        sigue a Fuutarou Uesugi, quien comienza a trabajar
+                        como tutor de las hermanas Nakano.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="estadisticas"
+            class="section">
+
+            <div class="container">
+
+                <h2 class="title is-3 section-title">
+                    Estadísticas
+                </h2>
+
+                <div class="columns is-multiline">
+
+                    <div class="column is-one-third">
+
+                        <div class="stat-box">
+
+                            <p class="stat-title">
+                                Inteligencia
+                            </p>
+
+                            <progress
+                                class="progress is-info"
+                                value="85"
+                                max="100">
+                            </progress>
+
+                            <p>
+                                Capacidad para aprender y estudiar.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="column is-one-third">
+
+                        <div class="stat-box">
+
+                            <p class="stat-title">
+                                Historia
+                            </p>
+
+                            <progress
+                                class="progress is-link"
+                                value="95"
+                                max="100">
+                            </progress>
+
+                            <p>
+                                Su principal área de interés.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="column is-one-third">
+
+                        <div class="stat-box">
+
+                            <p class="stat-title">
+                                Determinación
+                            </p>
+
+                            <progress
+                                class="progress is-primary"
+                                value="80"
+                                max="100">
+                            </progress>
+
+                            <p>
+                                Se esfuerza para superar sus dificultades.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="column is-one-third">
+
+                        <div class="stat-box">
+
+                            <p class="stat-title">
+                                Concentración
+                            </p>
+
+                            <progress
+                                class="progress is-warning"
+                                value="75"
+                                max="100">
+                            </progress>
+
+                            <p>
+                                Destaca cuando trabaja en temas que
+                                le interesan.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="column is-one-third">
+
+                        <div class="stat-box">
+
+                            <p class="stat-title">
+                                Sensibilidad
+                            </p>
+
+                            <progress
+                                class="progress is-danger"
+                                value="90"
+                                max="100">
+                            </progress>
+
+                            <p>
+                                Es una persona sensible y reservada.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="column is-one-third">
+
+                        <div class="stat-box">
+
+                            <p class="stat-title">
+                                Confianza
+                            </p>
+
+                            <progress
+                                class="progress is-success"
+                                value="70"
+                                max="100">
+                            </progress>
+
+                            <p>
+                                Mejora conforme avanza su desarrollo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer-miku has-text-centered">
+
+        <p>
+            <strong>
+                Miku Nakano
+            </strong>
+        </p>
+
+        <p>
+            Página creada para examen práctico con HTML5 y Bulma.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+
